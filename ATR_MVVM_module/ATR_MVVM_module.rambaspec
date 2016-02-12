@@ -12,7 +12,8 @@ code_files:
 
 # The declarations for test files
 test_files:
-# - {name: Service/ServiceTests.m, path: Tests/Service/service_tests.m.liquid}
+- {name: ViewControllerTests.swift, path: Tests/ViewControllerTests.swift.liquid}
+- {name: ViewModelTests.swift, path: Tests/ViewModelTests.swift.liquid}
 
 # Template dependencies
 dependencies:
