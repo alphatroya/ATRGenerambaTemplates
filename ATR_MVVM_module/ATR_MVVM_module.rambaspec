@@ -17,3 +17,5 @@ test_files:
 
 # Template dependencies
 dependencies:
+- Quick
+- Nimble
