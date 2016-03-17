@@ -18,7 +18,12 @@ class {{ module_info.name }}ViewController: ParentViewController {
 
     init(viewModel: {{ module_info.name }}ViewModelProtocol) {
         self.viewModel = viewModel 
-        super.init(nibName: nil, bundle: nil)
+        super.init(flowNavigator: viewModel)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
     }
 
 }
