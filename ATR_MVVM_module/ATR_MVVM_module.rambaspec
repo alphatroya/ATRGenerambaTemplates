@@ -1,8 +1,8 @@
 # Template information section
 name: ATR_MVVM_module
-summary: My personal MVVM module
+summary: My MVVM module template
 author: Alexey Korolev
-version: 1.0.0
+version: 1.1.0
 license: MIT
 
 # The declarations for code files
@@ -14,8 +14,3 @@ code_files:
 test_files:
 - {name: ViewControllerTests.swift, path: Tests/ViewControllerTests.swift.liquid}
 - {name: ViewModelTests.swift, path: Tests/ViewModelTests.swift.liquid}
-
-# Template dependencies
-dependencies:
-- Quick
-- Nimble

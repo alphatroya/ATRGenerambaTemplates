@@ -3,11 +3,21 @@
 import Foundation
 import RxSwift
 
-protocol {{ module_info.name }}ViewModelProtocol: ViewModelProtocol, FlowControllerNavigationManager {
+protocol {{ module_info.name }}ViewModelProtocol: ViewModel {
 
 }
 
-class {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
-    weak var flowController: FlowControllerProtocol?
-    let disposeBag = DisposeBag()
+final class {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
+    fileprivate let disposeBag = DisposeBag()
+
+    let router: AppRouterProtocol
+    init(router: AppRouterProtocol) {
+        self.router = router
+    }
 }
+
+extension {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
+    func viewIsReady() {
+    }
+}
+

@@ -1,10 +1,15 @@
 {% include 'header' %}
 
-import Quick
-import Nimble
+import XCTest
 
-class {{ module_info.name }}Spec: QuickSpec {
-    override func spec() {
-      
+class {{ module_info.name }}ViewControllerSpec: XCTestCase {
+    override func setUp() {
+        super.setUp()
     }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
 }
+

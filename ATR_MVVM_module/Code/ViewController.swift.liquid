@@ -2,9 +2,9 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: ParentViewController {
+final class {{ module_info.name }}ViewController: ParentViewController {
 
-    required init(coder aDecoder: NSCoder) {
+    required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
     }
 
@@ -12,13 +12,14 @@ class {{ module_info.name }}ViewController: ParentViewController {
 
     init(viewModel: {{ module_info.name }}ViewModelProtocol) {
         self.viewModel = viewModel 
-        super.init(flowNavigator: viewModel)
+        super.init(navigationRouter: viewModel)
     }
+
+    // MARK: - View Controller lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
-
 }
 
