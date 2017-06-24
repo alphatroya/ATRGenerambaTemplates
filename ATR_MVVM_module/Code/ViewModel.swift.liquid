@@ -7,7 +7,7 @@ protocol {{ module_info.name }}ViewModelProtocol: ViewModel {
 
 }
 
-final class {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
+final class {{ module_info.name }}ViewModel {
     fileprivate let disposeBag = DisposeBag()
 
     let router: AppRouterProtocol
