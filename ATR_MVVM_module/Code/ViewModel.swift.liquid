@@ -13,7 +13,7 @@ typealias {{ module_info.name }}State = State< , {{ module_info.name }}Error>
 
 final class {{ module_info.name }}ViewModel {
     fileprivate let disposeBag = DisposeBag()
-    let state: Variable<{{ module_info.name }}State> = .initial
+    let state: Variable<{{ module_info.name }}State> = Variable(.initial)
 
     let router: AppRouterProtocol
     init(router: AppRouterProtocol) {
