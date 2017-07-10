@@ -6,7 +6,7 @@ protocol {{ module_info.name }}ViewModelProtocol: ViewModel {
     var state: Variable<{{ module_info.name }}State> { get }
 }
 
-enum {{ module_info.name }}Error {
+enum {{ module_info.name }}Error: Error {
 }
 
 typealias {{ module_info.name }}State = State< , {{ module_info.name }}Error>
