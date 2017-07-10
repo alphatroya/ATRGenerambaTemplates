@@ -3,11 +3,17 @@ import Foundation
 import RxSwift
 
 protocol {{ module_info.name }}ViewModelProtocol: ViewModel {
-
+    var state: Variable<{{ module_info.name }}State> { get }
 }
+
+enum {{ module_info.name }}Error {
+}
+
+typealias {{ module_info.name }}State = State< , {{ module_info.name }}Error>
 
 final class {{ module_info.name }}ViewModel {
     fileprivate let disposeBag = DisposeBag()
+    let state: Variable<{{ module_info.name }}State> = .initial
 
     let router: AppRouterProtocol
     init(router: AppRouterProtocol) {
