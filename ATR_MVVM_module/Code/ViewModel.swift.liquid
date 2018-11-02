@@ -9,8 +9,8 @@ protocol {{ module_info.name }}VMProtocol {
 final class {{ module_info.name }}VM {
     private let disposeBag = DisposeBag()
 
-    let router: AppRouterProtocol
-    init(router: AppRouterProtocol) {
+    let router: ApplicationRouterProtocol
+    init(router: ApplicationRouterProtocol) {
         self.router = router
     }
 }
