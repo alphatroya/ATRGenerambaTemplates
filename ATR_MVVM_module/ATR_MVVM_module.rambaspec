@@ -7,10 +7,10 @@ license: MIT
 
 # The declarations for code files
 code_files:
-- {name: ViewController.swift, path: Code/ViewController.swift.liquid}
-- {name: ViewModel.swift, path: Code/ViewModel.swift.liquid}
+- {name: VC.swift, path: Code/ViewController.swift.liquid}
+- {name: VM.swift, path: Code/ViewModel.swift.liquid}
 
 # The declarations for test files
 test_files:
-- {name: ViewControllerTests.swift, path: Tests/ViewControllerTests.swift.liquid}
-- {name: ViewModelTests.swift, path: Tests/ViewModelTests.swift.liquid}
+- {name: VCTests.swift, path: Tests/ViewControllerTests.swift.liquid}
+- {name: VMTests.swift, path: Tests/ViewModelTests.swift.liquid}

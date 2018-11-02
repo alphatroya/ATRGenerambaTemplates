@@ -1,20 +1,21 @@
 {% include 'header' %}
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
-final class {{ module_info.name }}ViewController: ParentViewController {
+final class {{ module_info.name }}VC: ParentVC {
 
+    @available(*, deprecated)
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
     }
 
-    let viewModel: {{ module_info.name }}ViewModelProtocol
-    fileprivate let disposeBag = DisposeBag()
+    let viewModel: {{ module_info.name }}VMProtocol
+    private let disposeBag = DisposeBag()
 
-    init(viewModel: {{ module_info.name }}ViewModelProtocol) {
+    init(viewModel: {{ module_info.name }}VMProtocol) {
         self.viewModel = viewModel
-        super.init(navigationRouter: viewModel)
+        super.init(nibName: nil, bundle: nil)
     }
 
     // MARK: - View Controller lifecycle

@@ -2,18 +2,12 @@
 import Foundation
 import RxSwift
 
-protocol {{ module_info.name }}ViewModelProtocol: ViewModel {
-    var state: Variable<{{ module_info.name }}State> { get }
+protocol {{ module_info.name }}VMProtocol {
+    func viewIsReady()
 }
 
-enum {{ module_info.name }}Error: Error {
-}
-
-typealias {{ module_info.name }}State = State< , {{ module_info.name }}Error>
-
-final class {{ module_info.name }}ViewModel {
-    fileprivate let disposeBag = DisposeBag()
-    let state: Variable<{{ module_info.name }}State> = Variable(.initial)
+final class {{ module_info.name }}VM {
+    private let disposeBag = DisposeBag()
 
     let router: AppRouterProtocol
     init(router: AppRouterProtocol) {
@@ -21,7 +15,7 @@ final class {{ module_info.name }}ViewModel {
     }
 }
 
-extension {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
+extension {{ module_info.name }}VM: {{ module_info.name }}VMProtocol {
     func viewIsReady() {
     }
 }
